@@ -1,0 +1,236 @@
+
+/*Notes
+max-width vs width
+
+width: 600px This mean stay the same even if it dont fit
+max-width: 600px  This mean dont exceed this width size
+*/
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.clr{
+    clear: both;
+}
+/* Utility Classes */
+.container {
+    margin: auto;
+    max-width: 1100px;   /*make it some waht responsive*/
+    overflow: auto;   /*show scroll bar if needed */
+    padding: 0 20px;  /*not sure why padding is needed*/
+}
+
+.text-primary {
+    color: #f7c08a;
+}
+/* Utility Classes */
+
+/*navbar*/
+
+.fa-twitter:hover{
+    color: #45d5f8;
+}
+
+.fa-youtube:hover{
+    color: red;
+}
+.fa-instagram:hover{
+    color: #d82950;
+}
+.fa-facebook-f:hover{
+    color: #4b6ea8;
+}
+.fa-envelope:hover{
+    color: #404040;
+}
+
+.nav-Container{
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 30px;
+    max-width: 1900px;
+}
+
+/*nav i{
+    font-size: 10px;
+}*/
+
+.scroll{
+    background-color: #A1572F;
+    color: #eef;
+    position: fixed;
+    width: 100%;
+    opacity: 1;
+    transition: background-color 0.4s ease-out;
+}
+
+header nav{
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    opacity: 0.8;
+    /*background: #333333;*/
+    z-index: 1000;
+    position: sticky;
+}
+
+
+header .nav-left{
+    float: left;
+}
+header nav .nav-left a{
+    color: white;
+    font-weight: 600;
+}
+header nav .nav-left a:hover{
+    color: #f5ba4b;
+}
+
+header nav ul{
+    float: right;
+    text-align: right;
+}
+
+header nav ul li{
+    float: left;
+    /*margin: 0.5rem;*/
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: white;
+    display: block;
+    width: 42px;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    line-height: inherit;
+  /*  border-right: 1px solid #ededed;*/
+}
+
+header nav ul li:first-child{
+    /*border-left: 1px solid #ededed;*/
+}
+/*navbar*/
+
+
+/*showcase*/
+.showcase{
+    background: url('assets/img/home_01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 1000px;
+    position: absolute;
+    top: 0;
+
+   /* center this thing*/
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.showcase .showcase-content{
+    color: white;
+    text-align: left;
+    padding-top: 436px;
+    overflow: hidden;
+}
+/*showcase*/
+
+
+/*trax*/
+.trax{
+    background-color: white;
+    position: relative;
+    top: 850px;
+    padding: 100px;
+}
+.box{
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+.img-thumbnail{  /*4439 x3171*/
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 300px; /* Set a small width */
+    max-height: 200px;
+}
+.img-thumbnail:hover{
+    cursor: pointer;
+    box-shadow: 0 18px 32px -18px #000;
+    transform: translateY(-6px);
+    transition: all .2s ease-in-out;
+}
+.trax h3,p{
+    text-align: center;
+}
+/*trax*/
+
+
+
+
+/*### Smartphones (portrait and landscape)(small)### */
+@media screen and (min-width : 0px) and (max-width : 767px) {
+    .nav-left a{
+        display: none;
+    }
+    .nav-Container{
+        margin: 0 auto;
+        overflow: auto;
+        padding: 0 50px;
+        max-width: 1900px;
+    }
+    #navigation ul{
+        float: none;
+    }
+
+    .showcase{
+        background: url('assets/img/home_01.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 49%;
+    }
+    .showcase .showcase-content{
+        padding-top: 258px;
+    }
+
+    .trax{
+        top:  355px;
+        padding: 0;
+    }
+    .trax .top-content,.top-main{
+        display: none;
+    }
+
+    .box{
+        width: 100%;
+        padding: 0;
+        padding-top: 40px;
+    }
+
+   /* nav i{
+        font-size: 10px;
+    }*/
+}
