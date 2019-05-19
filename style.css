@@ -31,12 +31,12 @@ a {
 /* Utility Classes */
 .container {
     margin: auto;
-    max-width: 1100px;   /*make it some waht responsive*/
+    max-width: 68.75rem;   /*make it some waht responsive*/
     overflow: auto;   /*show scroll bar if needed */
-    padding: 0 20px;  /*not sure why padding is needed*/
+    padding: 0 1.25rem;  /*not sure why padding is needed*/
 }
 
-.text-primary {
+.custom-text-primary {
     color: #f7c08a;
 }
 /* Utility Classes */
@@ -63,8 +63,8 @@ a {
 .nav-Container{
     margin: 0 auto;
     overflow: auto;
-    padding: 0 30px;
-    max-width: 1900px;
+    padding: 0 1.88rem;
+    max-width: 118.75rem;
 }
 
 /*nav i{
@@ -82,12 +82,13 @@ a {
 
 header nav{
     overflow: auto;
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     border-bottom: 1px solid rgba(255,255,255,.06);
     opacity: 0.8;
     /*background: #333333;*/
     z-index: 1000;
     position: sticky;
+    padding-top: 10px;
 }
 
 
@@ -121,7 +122,7 @@ header nav ul li a {
     text-align: center;
     margin: 0;
     line-height: inherit;
-  /*  border-right: 1px solid #ededed;*/
+    /*  border-right: 1px solid #ededed;*/
 }
 
 header nav ul li:first-child{
@@ -136,11 +137,11 @@ header nav ul li:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 1000px;
+    min-height: 100vh;
     position: absolute;
     top: 0;
 
-   /* center this thing*/
+    /* center this thing*/
     left: 0;
     right: 0;
     overflow: hidden;
@@ -159,13 +160,14 @@ header nav ul li:first-child{
 .trax{
     background-color: white;
     position: relative;
-    top: 850px;
-    padding: 100px;
+    top: 53.13rem;
+    padding: 6.25rem;
+    height: 100vh;
 }
 .box{
     float: left;
     width: 33.3%;
-    padding: 50px;
+    padding: 3.13rem;
     text-align: center;
 }
 
@@ -203,6 +205,8 @@ header nav ul li:first-child{
     }
     #navigation ul{
         float: none;
+        display: flex;
+        justify-content: center;
     }
 
     .showcase{
@@ -213,11 +217,11 @@ header nav ul li:first-child{
         min-height: 49%;
     }
     .showcase .showcase-content{
-        padding-top: 258px;
+        padding-top: 16.13rem;
     }
 
     .trax{
-        top:  355px;
+        top:  22.19rem;
         padding: 0;
     }
     .trax .top-content,.top-main{
@@ -227,10 +231,10 @@ header nav ul li:first-child{
     .box{
         width: 100%;
         padding: 0;
-        padding-top: 40px;
+        padding-top: 2.5rem;
     }
 
-   /* nav i{
-        font-size: 10px;
-    }*/
+    /* nav i{
+         font-size: 10px;
+     }*/
 }
