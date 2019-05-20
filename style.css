@@ -29,12 +29,12 @@ a {
     clear: both;
 }
 /* Utility Classes */
-.container {
+/*.container {
     margin: auto;
-    max-width: 68.75rem;   /*make it some waht responsive*/
-    overflow: auto;   /*show scroll bar if needed */
-    padding: 0 1.25rem;  /*not sure why padding is needed*/
-}
+    max-width: 68.75rem;   !*make it some waht responsive*!
+    overflow: auto;   !*show scroll bar if needed *!
+    padding: 0 1.25rem;  !*not sure why padding is needed*!
+}*/
 
 .custom-text-primary {
     color: #f7c08a;
@@ -72,7 +72,8 @@ a {
 }*/
 
 .scroll{
-    background-color: #A1572F;
+    /*background-color: #A1572F;*/
+    background-color: rgba(0,0,0,.6);
     color: #eef;
     position: fixed;
     width: 100%;
@@ -94,6 +95,7 @@ header nav{
 
 header .nav-left{
     float: left;
+    padding: 20px 17px;
 }
 header nav .nav-left a{
     color: white;
@@ -122,22 +124,35 @@ header nav ul li a {
     text-align: center;
     margin: 0;
     line-height: inherit;
+    padding: 20px 17px;
     /*  border-right: 1px solid #ededed;*/
 }
 
 header nav ul li:first-child{
     /*border-left: 1px solid #ededed;*/
 }
+
 /*navbar*/
 
 
 /*showcase*/
+
+.dark-overlay{
+    width: 100%;
+    min-height: 95vh;
+    background: linear-gradient(50deg,#ff4169 0, #7c26f8 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+}
+
 .showcase{
     background: url('assets/img/home_01.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 100vh;
+    min-height: 95vh;
     position: absolute;
     top: 0;
 
@@ -149,10 +164,22 @@ header nav ul li:first-child{
 
 .showcase .showcase-content{
     color: white;
-    text-align: left;
+    text-align: center;
     padding-top: 436px;
     overflow: hidden;
+    opacity: 0.9;
 }
+
+.showcase-content .btn-info{
+    font-size: 1.5rem;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 19px 56px 21px;
+}
+
+/*.showcase-content .jumbotron{
+    background-color: inherit;
+}*/
 /*showcase*/
 
 
@@ -166,8 +193,9 @@ header nav ul li:first-child{
 }
 .box{
     float: left;
-    width: 33.3%;
-    padding: 3.13rem;
+    /*width: 33.3%;*/
+    width: 100%;
+    /*padding: 3.13rem;*/
     text-align: center;
 }
 
@@ -184,8 +212,17 @@ header nav ul li:first-child{
     transform: translateY(-6px);
     transition: all .2s ease-in-out;
 }
-.trax h3,p{
+.trax h2,p{
     text-align: center;
+    padding-bottom: 10px;
+}
+.trax p{
+    padding-bottom: 1rem;
+}
+.trax h2{
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
 }
 /*trax*/
 
@@ -208,6 +245,9 @@ header nav ul li:first-child{
         display: flex;
         justify-content: center;
     }
+    header nav ul li a{
+        padding: 0;
+    }
 
     .showcase{
         background: url('assets/img/home_01.jpg');
@@ -217,7 +257,16 @@ header nav ul li:first-child{
         min-height: 49%;
     }
     .showcase .showcase-content{
-        padding-top: 16.13rem;
+        padding-top: 11.13rem;
+    }
+    .carousel-control-prev,.carousel-control-next{
+        display: none;
+    }
+    .showcase-content h1{
+        font-size: 1.5rem;
+    }
+    .showcase-content .btn-info{
+        padding: 5px 5px;
     }
 
     .trax{
@@ -228,11 +277,11 @@ header nav ul li:first-child{
         display: none;
     }
 
-    .box{
+    /*.box{
         width: 100%;
         padding: 0;
         padding-top: 2.5rem;
-    }
+    }*/
 
     /* nav i{
          font-size: 10px;
