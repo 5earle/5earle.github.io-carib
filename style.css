@@ -24,6 +24,10 @@ a {
     color: #333;
     text-decoration: none;
 }
+a:hover{
+    text-decoration: none;
+    color: white;
+}
 
 .clr{
     clear: both;
@@ -38,6 +42,10 @@ a {
 
 .custom-text-primary {
     color: #f7c08a;
+}
+
+[role=button] {
+    cursor: pointer;
 }
 /* Utility Classes */
 
@@ -89,7 +97,7 @@ header nav{
     /*background: #333333;*/
     z-index: 1000;
     position: sticky;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
 }
 
 
@@ -287,3 +295,107 @@ header nav ul li:first-child{
          font-size: 10px;
      }*/
 }
+
+
+/**************************************ARTIST********************************/
+
+/***TOP***/
+.artist-header{
+    background: #383838;
+    padding: 10px;
+    color: #aaaaaa;
+    border-bottom: 1px solid #181818;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+}
+.artist-header .search{
+    margin-left: 1%;
+}
+.artist-header .search input{
+    border-radius: 15px;
+    border: none;
+    background: white;
+    color: #181818;
+    padding-left: 30px;
+    outline: none; /*remove the blue outline when click*/
+   /* add a background image for the icon*/
+}
+.artist-header .user{
+    width: 300px;
+    margin-left: auto;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.artist-header .user .user_actions button{
+    background: none;
+    border: none;
+    outline: none;
+}
+.dropdown-menu{
+    background-color: #282828;
+    margin-top: 25px;
+    border-radius: 2px;
+    padding: 0;
+    border: none;
+}
+.dropdown-menu li{
+    padding: 10px;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+.dropdown-menu a{
+    color: #aaaaaa;
+}
+/***TOP***/
+
+/***Content***/
+.content{
+    display: flex;
+    flex-flow: nowrap;
+}
+.content_left{
+    width: 15%;
+}
+.content_left .left-navigation{
+    min-height: 635px;
+    padding: 15px;
+    background: #282828;
+    color: #aaaaaa;
+    overflow-y: scroll;
+}
+.left-navigation .navigation_list{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 15px
+}
+.navigation__list__header{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+/*.navigation__list__header:after{
+    font-family: "Ionicons";
+    content: "\f123";
+}*/
+.navigation_list_item{
+    color: #aaaaaa;
+    padding: 5px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+}
+.navigation_list_item i{
+    width: 25px;
+    display: block;
+    font-size: 10px;
+}
+/*.navigation_list_item a:hover{
+    color: white !important;
+}*/
+/***Content***/
