@@ -1,0 +1,287 @@
+
+/*Notes
+max-width vs width
+
+width: 600px This mean stay the same even if it dont fit
+max-width: 600px  This mean dont exceed this width size
+*/
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.clr{
+    clear: both;
+}
+/* Utility Classes */
+/*.container {
+    margin: auto;
+    max-width: 68.75rem;   !*make it some waht responsive*!
+    overflow: auto;   !*show scroll bar if needed *!
+    padding: 0 1.25rem;  !*not sure why padding is needed*!
+}*/
+
+.custom-text-primary {
+    color: #f7c08a;
+}
+
+[role=button] {
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.8;
+}
+/* Utility Classes */
+
+
+/**************************************ARTIST********************************/
+
+/***TOP***/
+.artist-header{
+    background: #383838;
+    padding: 10px;
+    color: #aaaaaa;
+    border-bottom: 1px solid #181818;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+}
+.artist-header .search{
+    margin-left: 1%;
+}
+.artist-header .search input{
+    border-radius: 15px;
+    border: none;
+    background: white;
+    color: #181818;
+    padding-left: 30px;
+    outline: none; /*remove the blue outline when click*/
+    /* add a background image for the icon*/
+}
+.artist-header .user{
+    width: 300px;
+    margin-left: auto;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.artist-header .user .user_actions button{
+    background: none;
+    border: none;
+    outline: none;
+}
+.dropdown-menu{
+    background-color: #282828;
+    margin-top: 25px;
+    border-radius: 2px;
+    padding: 0;
+    border: none;
+}
+.dropdown-menu li{
+    padding: 10px;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+.dropdown-menu a{
+    color: #aaaaaa;
+}
+/***TOP***/
+
+/***Content***/
+.content{
+    display: flex;
+    flex-flow: nowrap;
+}
+.content_left{
+    width: 15%;
+}
+.content_left .left-navigation{
+    min-height: 635px;
+    padding: 15px;
+    background: #282828;
+    color: #aaaaaa;
+    overflow-y: scroll;
+}
+.left-navigation .navigation_list{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 15px
+}
+.navigation__list__header{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+/*.navigation__list__header:after{
+    font-family: "Ionicons";
+    content: "\f123";
+}*/
+.navigation_list_item{
+    color: #aaaaaa;
+    padding: 5px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+}
+.navigation_list_item i{
+    width: 25px;
+    display: block;
+    font-size: 10px;
+}
+/*.navigation_list_item a:hover{
+    color: white !important;
+}*/
+/***Content***/
+
+/*middle content*/
+.content_middle{
+    width: 70%;
+}
+.artist{
+    overflow-y: scroll;
+}
+.artist_middle_header{
+    height: 320px;
+    border-bottom: 1px solid #282828;
+    position: relative;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/g-eazy.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.artist_middle_header:before{
+    content: ' ';
+    width: 100%;
+    min-height: 320px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+}
+.artist_middle_info{
+    padding: 15px;
+    z-index: 1;
+    max-width: 80%;
+    margin-top: 78px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+.profile_middle_img{
+    position: relative;
+    margin-right: 15px;
+}
+.profile_middle_img img{
+    max-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+}
+.artist_middle_info_type{
+    color: #aaaaaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.artist_middle_info_name{
+    color: white;
+    font-size: 36px;
+    font-weight: 100;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+}
+.artist_middle_info_actions{
+    display: flex;
+    flex-flow: row wrap;
+}
+.artist_middle_info_actions button{
+    margin-right: 10px;
+    height: 27px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 15px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    outline: none;
+}
+.artist_middle_info_actions .button-dark{
+    background: #1ed760;
+    color: white;
+    border: 1px solid #1ed760;
+}
+.button-dark i{
+    margin-right: 5px;
+}
+.artist_middle_info_actions .button-light{
+    background: none;
+    color: #c8c8c8;
+    border: 1px solid #c8c8c8;
+}
+.artist_middle_info_actions .more{
+    width: 25px;
+    height: 27px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    padding: 5px;
+}
+.artist_middle_listeners{
+    max-width: 20%;
+    z-index: 1;
+    padding: 15px;
+    text-align: right;
+    color: #aaaaaa;
+    font-weight: 100;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.middle_label{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.artist_middle_navigation{
+    width: 100%;
+    z-index: 1;
+    background: rgba(24, 24, 24, 0.6);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center
+}
+/*middle content*/
