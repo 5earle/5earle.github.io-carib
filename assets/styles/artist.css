@@ -17,7 +17,9 @@ max-width: 600px  This mean dont exceed this width size
 html,body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7em;
+    background-color: #282828;
 }
+
 
 
 
@@ -284,4 +286,94 @@ button:hover{
     justify-content: space-between;
     align-items: center
 }
+
+/*content*/
+.artist_middle_content{
+  /*  padding: 15px;*/
+}
+.overview_albums{
+    background-color: #333;
+    width: 100%;
+    /*border-top: 1px solid red;*/
+}
+.album_info{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 15px
+}
+.album_info .album_info_art img{
+    width: 135px;
+    height: 135px;
+}
+.album_info_meta{
+    margin-left: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    color: #aaaaaa;
+}
+.tracks{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 15px;
+}
+.tracks .tracks_heading{
+    color: #aaaaaa;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 42px;
+}
+.tracks_heading .tracks_heading_number{
+    margin-left: 10px;
+    font-style: italic;
+}
+.tracks_heading .tracks_heading_title{
+    margin-left: 70px;
+    width: 45%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.track{
+    border-top: 1px solid #181818;
+    height: 42px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-size: 14px;
+}
+.track .track_number{
+    margin-left: 10px;
+    color: #aaaaaa;
+    width: 12px;
+}
+.track .track_play{
+    margin-left: 30px;
+    color: #c8c8c8;
+}
+.track_play:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.track .track_title{
+    color: white;
+    width: 70%;
+    margin-left: 30px;
+}
+.track .track_option{
+    color: #aaaaaa;
+}
+.track .track_length{
+    color: #aaaaaa;
+    margin: auto;
+}
 /*middle content*/
+
+
+/*current track*/
+.current-track{
+    background: #282828;
+    padding: 5px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
